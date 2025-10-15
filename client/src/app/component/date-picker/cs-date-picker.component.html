@@ -14,7 +14,7 @@
     [attr.max]="max"
     [disabled]="disabled"
     [value]="value ?? ''"
-    (change)="handleChange(($event.target as HTMLInputElement).value)"
+    (change)="handleChange($any($event.target).value)"
     (blur)="handleBlur()"
   />
 </cs-form-field>

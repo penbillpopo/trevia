@@ -14,7 +14,7 @@
     [rows]="rows"
     [disabled]="disabled"
     [value]="value"
-    (input)="handleInput(($event.target as HTMLTextAreaElement).value)"
+    (input)="handleInput($any($event.target).value)"
     (blur)="handleBlur()"
   ></textarea>
 </cs-form-field>

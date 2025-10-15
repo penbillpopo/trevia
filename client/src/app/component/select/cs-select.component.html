@@ -11,7 +11,7 @@
     [attr.name]="name"
     [disabled]="disabled"
     [value]="value ?? ''"
-    (change)="handleChange(($event.target as HTMLSelectElement).value)"
+    (change)="handleChange($any($event.target).value)"
     (blur)="handleBlur()"
   >
     <option

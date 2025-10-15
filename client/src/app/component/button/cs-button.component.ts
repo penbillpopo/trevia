@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { NgClass } from '@angular/common';
+import { CommonModule, NgClass } from '@angular/common';
 
 @Component({
   selector: 'cs-button',
   standalone: true,
-  imports: [NgClass],
+  imports: [CommonModule, NgClass],
   templateUrl: './cs-button.component.html',
   styleUrl: './cs-button.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
