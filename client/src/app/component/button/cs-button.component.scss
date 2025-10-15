@@ -13,17 +13,17 @@
     color 0.2s ease, border-color 0.2s ease;
   background-color: var(--color-accent);
   color: #ffffff;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
 }
 
 .cs-button:hover:not(:disabled) {
   transform: translateY(-1px);
-  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.18);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
 }
 
 .cs-button:active:not(:disabled) {
   transform: translateY(0);
-  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.16);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
 .cs-button:disabled {
@@ -36,12 +36,12 @@
   background: #ffffff;
   color: var(--color-accent);
   border-color: rgba(37, 99, 235, 0.2);
-  box-shadow: none;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
 }
 
 .cs-button--outline:hover:not(:disabled) {
   border-color: rgba(37, 99, 235, 0.35);
-  box-shadow: 0 14px 38px rgba(37, 99, 235, 0.08);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
 }
 
 .cs-button--ghost {
@@ -52,17 +52,18 @@
 }
 
 .cs-button--ghost:hover:not(:disabled) {
-  background-color: rgba(37, 99, 235, 0.08);
+  background-color: rgba(15, 23, 42, 0.04);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
 }
 
 .cs-button--danger {
   background: #ef4444;
   color: #ffffff;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
 }
 
 .cs-button--danger:hover:not(:disabled) {
-  box-shadow: 0 20px 50px rgba(239, 68, 68, 0.18);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
 }
 
 .cs-button--text {
@@ -70,12 +71,14 @@
   color: var(--color-accent);
   border-color: transparent;
   box-shadow: none;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .cs-button--text:hover:not(:disabled) {
+  background: transparent;
   text-decoration: underline;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
 }
 
 .cs-button--full {

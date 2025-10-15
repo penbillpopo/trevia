@@ -1,6 +1,6 @@
 .cs-checkbox {
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.75rem;
   cursor: pointer;
   user-select: none;
@@ -21,14 +21,31 @@
   justify-content: center;
   transition: border-color 0.2s ease, background-color 0.2s ease;
   position: relative;
+  box-sizing: border-box;
+}
+
+.cs-checkbox__box::after {
+  content: '';
+  position: absolute;
+  width: 0.4rem;
+  height: 0.7rem;
+  border: 2px solid #fff;
+  border-top: 0;
+  border-left: 0;
+  transform: rotate(45deg) scale(0);
+  transform-origin: center;
+  top: 0.05rem;
+  transition: transform 0.15s ease;
 }
 
 .cs-checkbox__label {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
   color: var(--color-text);
   font-size: 0.95rem;
+  line-height: 1.2;
 }
 
 .cs-checkbox__label small {
@@ -47,13 +64,7 @@
 }
 
 .cs-checkbox__native:checked + .cs-checkbox__box::after {
-  content: '';
-  width: 0.35rem;
-  height: 0.65rem;
-  border: 2px solid #fff;
-  border-top: 0;
-  border-left: 0;
-  transform: rotate(45deg);
+  transform: rotate(45deg) scale(1);
 }
 
 .cs-checkbox__native:disabled + .cs-checkbox__box,

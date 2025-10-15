@@ -2,7 +2,7 @@
   <div class="login-card">
     <header class="login-card__header">
       <h1 class="brand">Trevia</h1>
-      <p class="login-card__subtitle">Sign in to pick up where you left off.</p>
+      <p class="login-card__subtitle">Log in to pick up where you left off.</p>
     </header>
 
     <cs-form class="login-form" [formGroup]="loginForm" (submitted)="submit()" autocomplete="off">
@@ -25,28 +25,26 @@
       ></cs-input>
 
       <div class="login-form__meta">
-        <label class="remember">
-          <input type="checkbox" formControlName="rememberMe" />
-          <span>Remember me</span>
-        </label>
+        <cs-checkbox formControlName="rememberMe" label="Remember me"></cs-checkbox>
 
-        <button
+        <cs-button
           type="button"
-          class="forgot"
+          variant="text"
           (click)="goToForgotPassword()"
           [disabled]="isSubmitting()"
         >
           Forgot password?
-        </button>
+        </cs-button>
       </div>
 
       <cs-button
         type="submit"
         variant="primary"
         [fullWidth]="true"
-        [disabled]="(loginForm.invalid && hasSubmitted()) || isSubmitting()"
+        [disabled]="loginForm.invalid || isSubmitting()"
+        [loading]="isSubmitting()"
       >
-        Sign in
+        Log in
       </cs-button>
 
       <p class="login-form__hint">
@@ -58,7 +56,7 @@
 
     <footer class="login-card__footer">
       <span>Don't have an account?</span>
-      <a href="#">Create one</a>
+      <a routerLink="/register">Create one</a>
     </footer>
   </div>
 </section>

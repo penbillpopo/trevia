@@ -1,16 +1,29 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { take } from 'rxjs';
 import { finalize } from 'rxjs/operators';
-import { CsButtonComponent, CsFormComponent, CsInputComponent } from '../component';
+import {
+  CsButtonComponent,
+  CsCheckboxComponent,
+  CsFormComponent,
+  CsInputComponent
+} from '../component';
 import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'cs-login',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, CsFormComponent, CsInputComponent, CsButtonComponent],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    CsFormComponent,
+    CsInputComponent,
+    CsButtonComponent,
+    CsCheckboxComponent,
+    RouterLink
+  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
@@ -77,7 +90,7 @@ export class LoginComponent implements OnInit {
           this.router.navigateByUrl('/landing');
         },
         error: error => {
-          this.errorMessage.set(error.message || 'Unable to sign in right now. Please try again.');
+          this.errorMessage.set(error.message || 'Unable to log in right now. Please try again.');
         }
       });
   }

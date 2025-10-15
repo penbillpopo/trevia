@@ -80,64 +80,12 @@
   color: var(--color-muted);
 }
 
-.remember {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  cursor: pointer;
-  user-select: none;
+.login-form__meta cs-checkbox {
+  font-size: 0.9rem;
 }
 
-.remember input {
-  width: 1rem;
-  height: 1rem;
-  margin: 0;
-  border-radius: 4px;
-  outline: none;
-  appearance: none;
-  accent-color: var(--color-accent);
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(148, 163, 184, 0.6);
-  background-color: #ffffff;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
-}
-
-.remember input:is(:hover, :focus-visible) {
-  border-color: var(--color-accent);
-}
-
-.remember input:checked {
-  background-color: var(--color-accent);
-  border-color: transparent;
-}
-
-.remember input:checked::after {
-  content: '';
-  width: 0.35rem;
-  height: 0.65rem;
-  border: 2px solid #ffffff;
-  border-top: 0;
-  border-left: 0;
-  transform: rotate(45deg);
-}
-
-.forgot {
-  color: var(--color-accent);
-  font-weight: 600;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.forgot:hover:not(:disabled) {
-  text-decoration: underline;
-}
-
-.forgot:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+.login-form__meta cs-button {
+  font-size: 0.85rem;
 }
 
 .login-card__footer {
