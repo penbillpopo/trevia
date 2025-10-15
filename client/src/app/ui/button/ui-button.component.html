@@ -1,0 +1,10 @@
+<button
+  class="ui-button"
+  [ngClass]="hostClasses"
+  [attr.type]="type"
+  [disabled]="disabled"
+>
+  <span class="ui-button__label">
+    <ng-content />
+  </span>
+</button>

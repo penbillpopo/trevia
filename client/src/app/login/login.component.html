@@ -1,0 +1,51 @@
+<section class="login-page">
+  <div class="login-card">
+    <header class="login-card__header">
+      <h1 class="brand">Trevia</h1>
+      <p class="login-card__subtitle">Sign in to pick up where you left off.</p>
+    </header>
+
+    <ui-form class="login-form" [formGroup]="loginForm" (submitted)="submit()" autocomplete="off">
+      <ui-input
+        formControlName="email"
+        label="Email"
+        type="email"
+        placeholder="you@example.com"
+        [required]="true"
+        [errors]="emailErrors"
+      ></ui-input>
+
+      <ui-input
+        formControlName="password"
+        label="Password"
+        type="password"
+        placeholder="At least 8 characters"
+        [required]="true"
+        [errors]="passwordErrors"
+      ></ui-input>
+
+      <div class="login-form__meta">
+        <label class="remember">
+          <input type="checkbox" formControlName="rememberMe" />
+          <span>Remember me</span>
+        </label>
+
+        <a href="#" class="forgot">Forgot password?</a>
+      </div>
+
+      <ui-button
+        type="submit"
+        variant="primary"
+        [fullWidth]="true"
+        [disabled]="loginForm.invalid && hasSubmitted()"
+      >
+        Sign in
+      </ui-button>
+    </ui-form>
+
+    <footer class="login-card__footer">
+      <span>Don't have an account?</span>
+      <a href="#">Create one</a>
+    </footer>
+  </div>
+</section>
