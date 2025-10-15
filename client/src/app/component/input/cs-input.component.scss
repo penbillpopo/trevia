@@ -1,27 +1,27 @@
-.ui-input {
+.cs-input {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   font-size: 0.95rem;
 }
 
-.ui-input__meta {
+.cs-input__meta {
   display: flex;
   align-items: baseline;
   gap: 0.25rem;
 }
 
-.ui-input__label {
+.cs-input__label {
   font-weight: 600;
   color: var(--color-text);
 }
 
-.ui-input__required {
+.cs-input__required {
   color: #ef4444;
   font-size: 0.85em;
 }
 
-.ui-input__control {
+.cs-input__control {
   display: flex;
   align-items: center;
   padding: 0.875rem 1rem;
@@ -32,21 +32,21 @@
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.ui-input__control:focus-within {
+.cs-input__control:focus-within {
   border-color: var(--color-accent);
   box-shadow:
     inset 0 1px 0 rgba(148, 163, 184, 0.05),
     0 0 0 4px rgba(37, 99, 235, 0.12);
 }
 
-.ui-input__control--invalid {
+.cs-input__control--invalid {
   border-color: #ef4444;
   box-shadow:
     inset 0 1px 0 rgba(239, 68, 68, 0.08),
     0 0 0 4px rgba(239, 68, 68, 0.1);
 }
 
-.ui-input__native {
+.cs-input__native {
   width: 100%;
   border: none;
   outline: 0;
@@ -54,16 +54,16 @@
   color: inherit;
 }
 
-.ui-input__native::placeholder {
+.cs-input__native::placeholder {
   color: #94a3b8;
 }
 
-.ui-input__support {
+.cs-input__support {
   font-size: 0.78rem;
   line-height: 1.4;
   color: #ef4444;
 }
 
-.ui-input__support--muted {
+.cs-input__support--muted {
   color: var(--color-muted);
 }

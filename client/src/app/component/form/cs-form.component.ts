@@ -2,14 +2,14 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'ui-form',
+  selector: 'cs-form',
   standalone: true,
   imports: [ReactiveFormsModule],
-  templateUrl: './ui-form.component.html',
-  styleUrl: './ui-form.component.scss',
+  templateUrl: './cs-form.component.html',
+  styleUrl: './cs-form.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UiFormComponent {
+export class CsFormComponent {
   @Input({ required: true }) formGroup!: FormGroup;
   @Input() novalidate = true;
   @Input() autocomplete: 'on' | 'off' = 'off';

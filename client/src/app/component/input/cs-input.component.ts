@@ -16,15 +16,15 @@ import { CommonModule } from '@angular/common';
 let nextId = 0;
 
 @Component({
-  selector: 'ui-input',
+  selector: 'cs-input',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './ui-input.component.html',
-  styleUrl: './ui-input.component.scss',
+  templateUrl: './cs-input.component.html',
+  styleUrl: './cs-input.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UiInputComponent implements ControlValueAccessor {
-  private readonly defaultId = `ui-input-${++nextId}`;
+export class CsInputComponent implements ControlValueAccessor {
+  private readonly defaultId = `cs-input-${++nextId}`;
 
   @Input() label?: string;
   @Input() placeholder?: string;

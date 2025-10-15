@@ -2,14 +2,14 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'ui-button',
+  selector: 'cs-button',
   standalone: true,
   imports: [NgClass],
-  templateUrl: './ui-button.component.html',
-  styleUrl: './ui-button.component.scss',
+  templateUrl: './cs-button.component.html',
+  styleUrl: './cs-button.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UiButtonComponent {
+export class CsButtonComponent {
   @Input() type: 'button' | 'submit' | 'reset' = 'button';
   @Input() variant: 'primary' | 'outline' | 'ghost' = 'primary';
   @Input() fullWidth = false;
@@ -17,10 +17,10 @@ export class UiButtonComponent {
 
   get hostClasses(): Record<string, boolean> {
     return {
-      'ui-button--primary': this.variant === 'primary',
-      'ui-button--outline': this.variant === 'outline',
-      'ui-button--ghost': this.variant === 'ghost',
-      'ui-button--full': this.fullWidth
+      'cs-button--primary': this.variant === 'primary',
+      'cs-button--outline': this.variant === 'outline',
+      'cs-button--ghost': this.variant === 'ghost',
+      'cs-button--full': this.fullWidth
     };
   }
 }

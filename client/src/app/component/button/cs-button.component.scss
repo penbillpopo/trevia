@@ -1,4 +1,4 @@
-.ui-button {
+.cs-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -16,50 +16,50 @@
   box-shadow: var(--shadow-soft);
 }
 
-.ui-button:hover:not(:disabled) {
+.cs-button:hover:not(:disabled) {
   transform: translateY(-1px);
   box-shadow: 0 20px 50px rgba(37, 99, 235, 0.18);
 }
 
-.ui-button:active:not(:disabled) {
+.cs-button:active:not(:disabled) {
   transform: translateY(0);
   box-shadow: 0 12px 32px rgba(37, 99, 235, 0.16);
 }
 
-.ui-button:disabled {
+.cs-button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
   box-shadow: none;
 }
 
-.ui-button--outline {
+.cs-button--outline {
   background: #ffffff;
   color: var(--color-accent);
   border-color: rgba(37, 99, 235, 0.2);
   box-shadow: none;
 }
 
-.ui-button--outline:hover:not(:disabled) {
+.cs-button--outline:hover:not(:disabled) {
   border-color: rgba(37, 99, 235, 0.35);
   box-shadow: 0 14px 38px rgba(37, 99, 235, 0.08);
 }
 
-.ui-button--ghost {
+.cs-button--ghost {
   background: transparent;
   color: var(--color-accent);
   border-color: transparent;
   box-shadow: none;
 }
 
-.ui-button--ghost:hover:not(:disabled) {
+.cs-button--ghost:hover:not(:disabled) {
   background-color: rgba(37, 99, 235, 0.08);
 }
 
-.ui-button--full {
+.cs-button--full {
   width: 100%;
 }
 
-.ui-button__label {
+.cs-button__label {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;

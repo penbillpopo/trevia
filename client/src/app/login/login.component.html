@@ -5,24 +5,24 @@
       <p class="login-card__subtitle">Sign in to pick up where you left off.</p>
     </header>
 
-    <ui-form class="login-form" [formGroup]="loginForm" (submitted)="submit()" autocomplete="off">
-      <ui-input
+    <cs-form class="login-form" [formGroup]="loginForm" (submitted)="submit()" autocomplete="off">
+      <cs-input
         formControlName="email"
         label="Email"
         type="email"
         placeholder="you@example.com"
         [required]="true"
         [errors]="emailErrors"
-      ></ui-input>
+      ></cs-input>
 
-      <ui-input
+      <cs-input
         formControlName="password"
         label="Password"
         type="password"
         placeholder="At least 8 characters"
         [required]="true"
         [errors]="passwordErrors"
-      ></ui-input>
+      ></cs-input>
 
       <div class="login-form__meta">
         <label class="remember">
@@ -30,18 +30,31 @@
           <span>Remember me</span>
         </label>
 
-        <a href="#" class="forgot">Forgot password?</a>
+        <button
+          type="button"
+          class="forgot"
+          (click)="goToForgotPassword()"
+          [disabled]="isSubmitting()"
+        >
+          Forgot password?
+        </button>
       </div>
 
-      <ui-button
+      <cs-button
         type="submit"
         variant="primary"
         [fullWidth]="true"
-        [disabled]="loginForm.invalid && hasSubmitted()"
+        [disabled]="(loginForm.invalid && hasSubmitted()) || isSubmitting()"
       >
         Sign in
-      </ui-button>
-    </ui-form>
+      </cs-button>
+
+      <p class="login-form__hint">
+        使用 demo 帳號登入：<strong>demo@trevia.app / Password123</strong>
+      </p>
+
+      <p class="login-form__error" *ngIf="errorMessage()">{{ errorMessage() }}</p>
+    </cs-form>
 
     <footer class="login-card__footer">
       <span>Don't have an account?</span>
