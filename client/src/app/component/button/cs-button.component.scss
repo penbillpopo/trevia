@@ -55,6 +55,29 @@
   background-color: rgba(37, 99, 235, 0.08);
 }
 
+.cs-button--danger {
+  background: #ef4444;
+  color: #ffffff;
+  box-shadow: var(--shadow-soft);
+}
+
+.cs-button--danger:hover:not(:disabled) {
+  box-shadow: 0 20px 50px rgba(239, 68, 68, 0.18);
+}
+
+.cs-button--text {
+  background: transparent;
+  color: var(--color-accent);
+  border-color: transparent;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.cs-button--text:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
 .cs-button--full {
   width: 100%;
 }
@@ -63,4 +86,23 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.cs-button__spinner {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  animation: cs-button-spin 0.6s linear infinite;
+}
+
+.cs-button--loading {
+  cursor: progress;
+}
+
+@keyframes cs-button-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
