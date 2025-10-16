@@ -20,6 +20,7 @@ export * from './tooltip/cs-tooltip.component';
 export * from './popover/cs-popover.component';
 export * from './tabs/cs-tabs.component';
 export * from './tabs/cs-tab.component';
+export * from './sidebar/cs-sidebar.component';
 
 export * from './toast/cs-toast.component';
 export * from './alert/cs-alert.component';

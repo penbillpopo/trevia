@@ -85,7 +85,7 @@ export class RegisterComponent implements OnInit {
     setTimeout(() => {
       this.isSubmitting.set(false);
       console.table(this.registerForm.getRawValue());
-      this.router.navigateByUrl('/landing', { state: { email } });
+      this.router.navigateByUrl('/app/dashboard', { state: { email } });
     }, 800);
   }
 

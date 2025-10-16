@@ -87,7 +87,7 @@ export class LoginComponent implements OnInit {
             this.clearRememberedEmail();
           }
 
-          this.router.navigateByUrl('/landing');
+          this.router.navigateByUrl('/app/dashboard');
         },
         error: error => {
           this.errorMessage.set(error.message || 'Unable to log in right now. Please try again.');
